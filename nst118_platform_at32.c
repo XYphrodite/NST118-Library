@@ -3,7 +3,7 @@
  * @brief Platform implementation for AT32F403A
  */
 
-#include "nst118.h"
+#include "nst118_platform.h"
 #include <at32f403a_407.h>
 #include "at32f403a_407_gpio.h"
 #include "DelayService.h"
