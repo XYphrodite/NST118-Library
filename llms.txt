@@ -1,0 +1,28 @@
+# NST118 Temperature Sensor Library — llms.txt
+# Context7 libraryId: /xyphrodite/nst118-library
+# This file lists all documentation for LLM/Context7 ingestion (llmstxt.org)
+
+# Title: NST118 Temperature Sensor Library — Portable I2C Driver for STM32/AT32/Arduino/ESP32
+
+# Description: Minimal C library for NST118 I2C temperature sensor (0x48/0x49, 12-bit 0.0625°C, -40..+125°C, one-shot ~20ms, shutdown, dual-sensor, no malloc). Callback-based HAL, platform-agnostic, MIT. Use with STM32 HAL, AT32, Arduino Wire, ESP-IDF.
+
+> Minimal portable C driver for NST118 I2C temperature sensor. Callback HAL, no malloc, 12-bit, one-shot 20ms, shutdown, dual addresses 0x48/0x49.
+
+## Docs
+
+- [README](README.md): Full bilingual guide, quick start, wiring, API
+- [API Header](nst118.h): Public API with Doxygen comments
+- [Platform Interface](nst118_platform.h): Callback types you must implement
+- [AT32 Reference](nst118_platform_at32.c): Working AT32F403A HAL I2C example
+- [Example](example.c): Minimal copy-paste example
+- [Implementation](nst118.c): Driver source (one-shot, shutdown logic)
+- [Changelog](CHANGELOG.md): Version history
+- [License](LICENSE): MIT
+
+## Quick start for LLMs
+
+Use `nst118_init` + `nst118_read_temperature`. Provide 3 callbacks: i2c_read(dev_addr, reg, data, len), i2c_write, delay_us. Addresses: 0x48 (AD=GND) / 0x49 (AD=VDD). Call nst118_read_temperature — triggers one-shot if in shutdown, waits ~20ms via delay_us.
+
+## Keywords
+
+nst118, temperature sensor, i2c temperature sensor, stm32, at32, at32f403a, arduino, esp32, esp-idf, embedded, mcu, hal, driver, c library, 12-bit, 0.0625C, i2c driver

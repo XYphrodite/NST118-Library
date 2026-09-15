@@ -30,5 +30,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - AT32F403A/F407 (with example implementation)
 - Easy to port to Arduino, STM32, ESP32, etc.
 
-[1.0.0]: https://github.com/yourusername/NST118-Library/releases/tag/v1.0.0
+[1.0.0]: https://github.com/XYphrodite/NST118-Library/releases/tag/v1.0.0
 
